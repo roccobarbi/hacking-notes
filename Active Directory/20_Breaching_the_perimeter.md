@@ -1,1 +1,5 @@
 # Active Directory: breaching the perimeter
+
+## TL;DR
+
+The first step for breaching an AD environment is a lot of OSINT. In particular, look for leaked credentials for users from the AD network: even if they are for other services, they may have reused them on AD (maybe with some minor and obvious change) and they could give you a foothold into the system. Remember that there's always a good chance that, if the admins force periodic password changes, users may simply add the year and month, or the year and a progressive number, at the end of their favourite password. Try to poke at the perimeter of the network and see if there's some less secure internet-facing service that you can breach more easily: chances are that it will have some configuration file with a set of AD credentials, or that it will let you tunnel into the network, where you can proceed with lateral movement and privesc. If you can get phisical access to the network (e.g. via a network port in some accessible room without strong NAC in place), see if you can reach some less-secure service (e.g. a printer) that you can leverage to obtain valid AD credentials.
