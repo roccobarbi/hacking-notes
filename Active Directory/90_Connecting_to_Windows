@@ -1,0 +1,9 @@
+# Active Directory: Connecting to Windows
+
+## psexec.py
+
+`psexec.py domain\user:password@ip`
+
+## evil-winrm
+
+`evil-winrm -i domain -u user -p password`
